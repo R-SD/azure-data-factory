@@ -1,0 +1,9 @@
+{
+	"name": "tokyo-olympic-df-reha",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fb95b7ab-2902-492c-b211-f6167fd11306",
+		"tenantId": "acbacd57-46cc-4507-a5af-77fc842ba10a"
+	}
+}
