@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "--Total athletes from each country\nselect country, count(*) as Total_Athletes from athletes group by country;\n\n-- Total medals for each country\nselect Team_Country, \nSUM(Gold) as Total_Gold,\nSUM(Silver) as Total_Silver,\nSUM(Bronze) as Total_Bronze FROM medals\nGROUP BY Team_Country;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "TokyoOlympicDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
