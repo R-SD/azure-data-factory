@@ -342,6 +342,38 @@
 					"referenceName": "AzureDatabricks1",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "sendEmailnotification",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Tokyo-Olympic-Transformationnotebook",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://sendemailreha.azurewebsites.net:443/api/sendmailnotification/triggers/When_a_HTTP_request_is_received/invoke?api-version=2022-05-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=nK3Sv0kjEUdeKy19BGYCQFSYYY1klvCZJWbIvFk5DTY",
+					"connectVia": {
+						"referenceName": "AutoResolveIntegrationRuntime",
+						"type": "IntegrationRuntimeReference"
+					},
+					"method": "POST",
+					"body": {
+						"value": "{\n\n    \"dataFactoryName\" : \"Pipeline running in @{pipeline().DataFactory}\",\n    \"pipeline\" : \"Pipeline name @{pipeline().Pipeline}\",\n    \"starttime\" : \"Pipeline started at @{pipeline().TriggerTime}\",\n    \"message\" : \"Job has completed successfully\"\n    \n}",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
