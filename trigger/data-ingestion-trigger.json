@@ -1,0 +1,36 @@
+{
+	"name": "data-ingestion-trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "data-ingestion",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Month",
+				"interval": 1,
+				"startTime": "2023-12-29T06:13:00",
+				"endTime": "2023-12-30T06:13:00",
+				"timeZone": "India Standard Time",
+				"schedule": {
+					"minutes": [
+						50
+					],
+					"hours": [
+						11
+					],
+					"monthDays": [
+						29
+					]
+				}
+			}
+		}
+	}
+}
