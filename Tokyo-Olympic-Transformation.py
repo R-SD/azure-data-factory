@@ -1,9 +1,9 @@
 # Databricks notebook source
 configs = {"fs.azure.account.auth.type": "OAuth",
 "fs.azure.account.oauth.provider.type": "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
-"fs.azure.account.oauth2.client.id": "",
-"fs.azure.account.oauth2.client.secret": '',
-"fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com//oauth2/token"}
+"fs.azure.account.oauth2.client.id": "b221451a-bc31-460e-b9a1-937727236f82",
+"fs.azure.account.oauth2.client.secret": 'fFU8Q~9laAcPL_bHbEh7u9OwA3Ax9ksIHXdtvb7m',
+"fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com/acbacd57-46cc-4507-a5af-77fc842ba10a/oauth2/token"}
 
 
 # COMMAND ----------
@@ -16,7 +16,7 @@ extra_configs = configs)
 # COMMAND ----------
 
 # MAGIC %fs
-# MAGIC ls "/mnt/tokyoolymic/raw_data"
+# MAGIC ls "/mnt/tokyoolymic/"
 
 # COMMAND ----------
 
@@ -56,3 +56,7 @@ medals.repartition(1).write.mode("overwrite").option("header","true").csv("/mnt/
 teams = spark.read.format("csv").option("header","true").option("inferSchema","true").load("/mnt/tokyoolymic/raw_data/teams.csv")
 teams.show()
 teams.repartition(1).write.mode("overwrite").option("header","true").csv("/mnt/tokyoolymic/transformed_data/teams")
+
+# COMMAND ----------
+
+dbutils.fs.unmount("/mnt/tokyoolymic/")
