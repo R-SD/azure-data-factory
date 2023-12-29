@@ -6,12 +6,8 @@
 		"type": "AzureDatabricks",
 		"typeProperties": {
 			"domain": "https://adb-4812954241492045.5.azuredatabricks.net",
-			"newClusterNodeType": "Standard_DS3_v2",
-			"newClusterNumOfWorker": "1",
-			"newClusterVersion": "14.2 ML (includes Apache Spark 3.5.0, Scala 2.12",
-			"clusterOption": "Fixed",
-			"newClusterInitScripts": [],
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDdGQTgyOEQxLUQ2MjAtNDY2Ni04RkQ5LTM2NjkxNUM4MkQzNF9hMjA3OWUyOS1lNDBiLTQ1Y2MtYjQ4OC1mOTMzZTQ5ODg0YjIiDQp9"
+			"existingClusterId": "1228-123147-ii5i8kgc",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDdGQTgyOEQxLUQ2MjAtNDY2Ni04RkQ5LTM2NjkxNUM4MkQzNF80MGExMDg4Mi1lYzVmLTQ0NTYtODg5OS1mMjI4NDJmOTc3ZWUiDQp9"
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
