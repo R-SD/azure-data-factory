@@ -12,7 +12,7 @@
           },
           "method": "post",
           "body": {
-            "To": "reha.justin96@outlook.com",
+            "To": "",
             "Subject": "@{triggerBody()?['pipeline']} : run successful",
             "Body": "<p><span style=\"white-space: pre-wrap;\">Hi,</span></p><br><p>@{triggerBody()?['message']}<span style=\"white-space: pre-wrap;\"> which started at </span>@{triggerBody()?['starttime']}</p>",
             "Importance": "Normal"
