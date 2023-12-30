@@ -1,0 +1,16 @@
+{
+  "managedApiConnections": {
+    "outlook": {
+      "api": {
+        "id": "/subscriptions/57bcd803-a64e-4507-bf4d-e4597ed715d6/providers/Microsoft.Web/locations/eastasia/managedApis/outlook"
+      },
+      "connection": {
+        "id": "/subscriptions/57bcd803-a64e-4507-bf4d-e4597ed715d6/resourceGroups/Demo/providers/Microsoft.Web/connections/outlook"
+      },
+      "authentication": {
+        "type": "ManagedServiceIdentity"
+      },
+      "connectionRuntimeUrl": "https://09cdaad916b42632.13.common.logic-eastasia.azure-apihub.net/apim/outlook/d8e5243e079647af8d4e031d04271ae8"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_EXTENSION_VERSION": "~4",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=demo9f39;AccountKey=yboFf9cRqRGCoarqlKtKY0naMF7XW0Rw54l+JxgMiaXCoIm20pVIAxLjhyQbR2tsM13/ots15ZeI+AStwddUTg==;EndpointSuffix=core.windows.net",
+    "WEBSITE_SITE_NAME": "sendemailnotificationreha",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "APP_KIND": "workflowApp",
+    "WEBSITE_AUTH_ENABLED": "False",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=demo9f39;AccountKey=yboFf9cRqRGCoarqlKtKY0naMF7XW0Rw54l+JxgMiaXCoIm20pVIAxLjhyQbR2tsM13/ots15ZeI+AStwddUTg==;EndpointSuffix=core.windows.net",
+    "AzureFunctionsJobHost__extensionBundle__id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+    "ScmType": "None",
+    "WEBSITE_CONTENTSHARE": "sendemailnotificationrehab2af",
+    "FUNCTIONS_RUNTIME_SCALE_MONITORING_ENABLED": "1",
+    "AzureFunctionsJobHost__extensionBundle__version": "[1.*, 2.0.0)",
+    "WEBSITE_SLOT_NAME": "Production",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=0b6540ac-78aa-4985-a044-5d17b114ebe7;IngestionEndpoint=https://eastasia-0.in.applicationinsights.azure.com/;LiveEndpoint=https://eastasia.livediagnostics.monitor.azure.com/",
+    "WEBSITE_NODE_DEFAULT_VERSION": "18.12.1"
+  }
+}
