@@ -1,17 +1,28 @@
 # Databricks notebook source
+
+display(dbutils.secrets.listScopes())
+display(dbutils.secrets.list("tokyoOlympics"))
+
+client_id = dbutils.secrets.get(scope= "tokyoOlympics" , key="client-id")
+client_secret = dbutils.secrets.get(scope= "tokyoOlympics" , key="client-secret")
+tenant_id = dbutils.secrets.get(scope= "tokyoOlympics" , key="tenant-id")
 configs = {"fs.azure.account.auth.type": "OAuth",
 "fs.azure.account.oauth.provider.type": "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
-"fs.azure.account.oauth2.client.id": "b221451a-bc31-460e-b9a1-937727236f82",
-"fs.azure.account.oauth2.client.secret": 'fFU8Q~9laAcPL_bHbEh7u9OwA3Ax9ksIHXdtvb7m',
-"fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com/acbacd57-46cc-4507-a5af-77fc842ba10a/oauth2/token"}
+"fs.azure.account.oauth2.client.id": client_id,
+"fs.azure.account.oauth2.client.secret": client_secret,
+"fs.azure.account.oauth2.client.endpoint": f"https://login.microsoftonline.com/{tenant_id}/oauth2/token"}
+
+display(configs)
 
 
 # COMMAND ----------
 
 dbutils.fs.mount(
-source = "abfss://tokyoolympicdata@tokyoolympicreha.dfs.core.windows.net", # contrainer@storageacc
-mount_point = "/mnt/tokyoolymic",
-extra_configs = configs)
+source = "abfss://tokyoolympicdata@tokyoolympicreha.dfs.core.windows.net/", # contrainer@storageacc
+mount_point = "/mnt/tokyoolymic/",   extra_configs = configs 
+)
+
+
 
 # COMMAND ----------
 
