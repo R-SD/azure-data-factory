@@ -370,7 +370,7 @@
 					},
 					"method": "POST",
 					"body": {
-						"value": "{\n\n    \"dataFactoryName\" : \"Pipeline running in @{pipeline().DataFactory}\",\n    \"pipeline\" : \"Pipeline name @{pipeline().Pipeline}\",\n    \"starttime\" : \"Pipeline started at @{pipeline().TriggerTime}\",\n    \"message\" : \"Job has completed successfully\"\n    \n}",
+						"value": "{\n\n    \"dataFactoryName\" : \"Pipeline running in @{pipeline().DataFactory}\",\n    \"pipeline\" : \"Pipeline name @{pipeline().Pipeline}\",\n    \"starttime\": \"pipeline().TriggerTime\",\n    \"message\" : \"Job has completed successfully\"\n    \n}",
 						"type": "Expression"
 					}
 				}
